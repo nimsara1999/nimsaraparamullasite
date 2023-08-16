@@ -2,10 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   padding: 0 30px;
-  background-color: #222;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+  background: black;
   width: 95%;
   height: 80px;
   border-radius: 13px;
@@ -13,6 +12,13 @@
   top: 20px;
   left: 50%;
   transform: translate(-50%);
+  opacity: 0.8;
+}
+.NavbarItems:hover {
+  backdrop-filter: blur(4px);
+  width: 96%;
+  height: 82px;
+  transition: 0.2s ease-in-out;
 }
 
 .logo {
@@ -40,7 +46,60 @@
 }
 .nav-links:hover {
   color: #f7b83b;
+  font-size: 1.2rem;
   border-radius: 4px;
   transition: all 0.2s ease-in-out;
-  text-shadow: #f7b83b;
+  box-shadow: #f7b83b;
+}
+.fa-times {
+  color: #fff;
+}
+.fa-bars {
+  color: #fff;
+}
+.menuIcons {
+  display: none;
+}
+
+@media screen and (max-width: 850px) {
+  .NavbarItems {
+    z-index: 99;
+  }
+  .MenuData {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    border-radius: 13px;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: -110%;
+    align-items: stretch;
+    padding: 80px 0 30px 0;
+    margin: 0;
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+  }
+  .MenuData.active {
+    left: 0%;
+  }
+
+  .nav-links {
+    display: block;
+    widows: 100%;
+    padding: 2rem 0;
+    color: #222;
+  }
+
+  .nav-links:hover {
+    color: #f7b83b;
+    border-radius: 0;
+  }
+  .menuIcons {
+    display: block;
+  }
 }
