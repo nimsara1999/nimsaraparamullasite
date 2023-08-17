@@ -6,19 +6,20 @@
   padding: 0 30px;
   background: black;
   width: 95%;
-  height: 80px;
+  height: 75px;
   border-radius: 13px;
   position: fixed;
   top: 20px;
   left: 50%;
   transform: translate(-50%);
-  opacity: 0.8;
+  opacity: 0.75;
 }
 .NavbarItems:hover {
   backdrop-filter: blur(4px);
   width: 96%;
-  height: 82px;
+  height: 80px;
   transition: 0.2s ease-in-out;
+  opacity: 1;
 }
 
 .logo {
