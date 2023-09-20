@@ -1,5 +1,49 @@
-.container {
+.tabs {
+  display: flex;
+  align-items: center;
   margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  padding: 40px 40px 40px 40px;
+  height: auto;
+}
+
+.d-flex {
+  list-style-type: none;
+  overflow: hidden;
+  margin-left: 450px;
+}
+
+.flex-fill {
+  margin: 5px 5px 5px 5px;
+  padding: 8px 8px 8px 8px;
+  float: left;
+  background-color: white;
+  border-radius: 13px;
+  color: black;
+}
+
+.flex-fill:hover {
+  color: white;
+  background-color: #f7b83b;
+}
+
+.flex-fill-select {
+  margin: 5px 5px 5px 5px;
+  padding: 8px 8px 8px 8px;
+  float: left;
+  border-radius: 13px;
+  color: white;
+  background-color: #f7b83b;
+}
+
+.togcontainer-hide {
+  display: none;
+}
+
+.togcontainer {
+  margin-top: 10px;
   margin-left: 450px;
   margin-right: 450px;
   align-items: center;
@@ -17,7 +61,7 @@
   margin-bottom: 30px;
 }
 
-.container .skill-box {
+.togcontainer .skill-box {
   width: 100%;
   margin: 25px 0;
 }

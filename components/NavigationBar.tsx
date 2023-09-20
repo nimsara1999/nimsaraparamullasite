@@ -1,6 +1,7 @@
 import {Component}from 'react'
 import {MenuData} from './NavigationBarData'
 import './NavigationBar.css'
+import {Link} from "react-router-dom"
 
 class NavigationBar extends Component{
     state={clicked:false};
@@ -9,7 +10,8 @@ class NavigationBar extends Component{
     }
     render(){
         return(
-            <nav className="NavbarItems">
+            <div className='Navbar'>
+                <nav className="NavbarItems">
                 <h1 className='logo'>Nimsara Paramulla</h1>
 
                 <div className='menuIcons' 
@@ -20,11 +22,14 @@ class NavigationBar extends Component{
                 <ul className={this.state.clicked ? "MenuData active" :"MenuData" }>
                     {MenuData.map((item,index)=>{
                         return(
-                            <li key={index}><a href={item.url} className={item.cName}><i className={item.icon}></i> {item.title}</a></li>
+                            <li key={index}>
+                                <Link to={item.url} className={item.cName}><i className={item.icon}></i> {item.title}</Link>
+                            </li>
                         );
                     })}
                 </ul>
             </nav>
+            </div>
         )
     }
 }

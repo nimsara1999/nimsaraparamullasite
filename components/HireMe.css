@@ -1,0 +1,45 @@
+.hire-me {
+  background: transparent;
+  margin-top: -15rem;
+  margin-left: 1.2rem;
+  width: 55%;
+  text-align: left;
+  color: white;
+}
+
+.title {
+  color: #f7b83b;
+  text-decoration: none;
+  list-style-type: none;
+  line-height: 30px;
+}
+
+.description {
+  color: white;
+  text-align: justify;
+  font-size: 1.1rem;
+  list-style-type: none;
+  display: block;
+  line-height: 30px;
+}
+
+.button-hire {
+  margin: top 5px;
+  list-style-type: none;
+}
+
+.hire-me-button {
+  padding: 5px 10px 5px 10px;
+  background-color: #2b6cb0;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.hire-me-button:hover {
+  background-color: #f7b83b;
+  font-size: 1.2rem;
+  transition: all 0.2s ease-in-out;
+  box-shadow: #f7b83b;
+  border-radius: 5px;
+}
