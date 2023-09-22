@@ -2,12 +2,8 @@
   scroll-behavior: smooth;
 }
 
-.welcome-panel {
-  padding-top: 20px;
-}
-
 .home-full {
-  background-color: rgba(0, 0, 0, 0.852);
+  background-color: #000000d9;
 }
 .avatar {
   display: flex;

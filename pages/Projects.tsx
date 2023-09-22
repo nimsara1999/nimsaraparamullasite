@@ -1,7 +1,7 @@
 import React from 'react'
 import IntroBox from '../components/IntroBox'
 import NavigationBar from '../components/NavigationBar'
-import './Projects.css'
+import Proj1 from '../Components/Projects/Proj1'
 
 export default function Projects() {
   return (
@@ -10,11 +10,9 @@ export default function Projects() {
       <div>
           <NavigationBar/>
       </div>
-    
-      <div className='menuBar'></div>
 
-      <div className="projectPage">
-        <h1>Projects</h1>
+      <div>
+        <Proj1></Proj1>
       </div>
 
     </div>
