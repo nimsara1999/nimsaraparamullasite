@@ -3,7 +3,9 @@ import NavigationBar from '../components/NavigationBar'
 import IntroBox from '../components/IntroBox'
 import './Home.css'
 import SkillBar from '../components/SkillBar'
-import HireMe from '../components/HireMe'
+import Avatar from '../components/Avatar'
+import { Button, ButtonGroup, Stack } from '@chakra-ui/react'
+import { MdEmail, MdArrowForward } from "react-icons/md"
 
 export default function Home() {
   return (
@@ -13,13 +15,24 @@ export default function Home() {
         <NavigationBar></NavigationBar>
       </div>
 
-      <div className="hire-me">
-        <HireMe></HireMe>
+      <div className="avatar">
+        <Avatar></Avatar>
+        <div>
+          <h1 className='heading'>I'm Nimsara Paramulla</h1>
+        </div>
+        <div>
+        <h2 className='intro'>Welcome to my digital hub! I'm all about IoT and embedded systems with software engineering expertise. Let's embark on this innovation journey together, fueled by curiosity.</h2>
+        </div>
+        <Stack direction='row' spacing={4}>
+          <Button leftIcon={<MdEmail />} colorScheme='purple' variant='solid'>
+            Email
+          </Button>
+          <Button rightIcon={<MdArrowForward />} colorScheme='purple' variant='outline'>
+            Call us
+          </Button>
+        </Stack>
       </div>
 
-      <div className="welcome-panel">
-        <IntroBox title="Welcome" description="Welcome to my digital hub! I'm Nimsara, passionate about IoT, embedded systems, software engineering, and full-stack development. Dive into my projects that blend technology and creativity – from intricate embedded systems to seamless software. Need services? I offer embedded systems and software engineering expertise. Join me on this exciting journey of discovery and innovation, where your curiosity fuels the exploration."/>
-      </div>
 
       <div>
         <SkillBar></SkillBar>

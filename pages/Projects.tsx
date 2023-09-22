@@ -10,7 +10,13 @@ export default function Projects() {
       <div>
           <NavigationBar/>
       </div>
-      
+    
+      <div className='menuBar'></div>
+
+      <div className="projectPage">
+        <h1>Projects</h1>
+      </div>
+
     </div>
     </>
   )
