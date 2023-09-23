@@ -7,6 +7,7 @@ import Avatar from '../components/Avatar'
 import { Button, ButtonGroup, Stack } from '@chakra-ui/react'
 import { MdEmail, MdArrowForward } from "react-icons/md"
 import Contact from '../components/Contact'
+import Skills from '../components/Skills'
 
 export default function Home() {
   return (
@@ -39,6 +40,14 @@ export default function Home() {
           </Button>
         </Stack>
       </div>
+
+      <div>
+        <h1 className='heading'>Core Skills</h1>
+      </div>
+      <div className='skills'>
+      <Skills/>
+      </div>
+
       <div>
         <Contact></Contact>
     </div>

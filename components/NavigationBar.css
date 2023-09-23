@@ -3,6 +3,7 @@
   z-index: 999;
 }
 .NavbarItems {
+  z-index: 99;
   display: flex;
   justify-content: space-between;
   align-items: center;
