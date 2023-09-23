@@ -1,8 +1,6 @@
 import React from 'react'
 import NavigationBar from '../components/NavigationBar'
-import IntroBox from '../components/IntroBox'
 import './Home.css'
-import SkillBar from '../components/SkillBar'
 import Avatar from '../components/Avatar'
 import { Button, ButtonGroup, Img, Stack } from '@chakra-ui/react'
 import { MdEmail, MdArrowForward } from "react-icons/md"

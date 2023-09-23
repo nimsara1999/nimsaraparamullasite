@@ -1,3 +1,8 @@
 .projects {
   background-color: rgba(0, 0, 0, 0.852);
 }
+
+.project-list {
+  align-items: center;
+  padding-top: 100px;
+}
