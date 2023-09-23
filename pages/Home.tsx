@@ -4,10 +4,11 @@ import IntroBox from '../components/IntroBox'
 import './Home.css'
 import SkillBar from '../components/SkillBar'
 import Avatar from '../components/Avatar'
-import { Button, ButtonGroup, Stack } from '@chakra-ui/react'
+import { Button, ButtonGroup, Img, Stack } from '@chakra-ui/react'
 import { MdEmail, MdArrowForward } from "react-icons/md"
 import Contact from '../components/Contact'
 import Skills from '../components/Skills'
+import About from '../components/About'
 
 export default function Home() {
   return (
@@ -42,10 +43,14 @@ export default function Home() {
       </div>
 
       <div>
-        <h1 className='heading'>Core Skills</h1>
+        <h1 className='core-heading'>Core Skills</h1>
       </div>
       <div className='skills'>
       <Skills/>
+      </div>
+
+      <div className='about-me'>
+      <About></About>
       </div>
 
       <div>

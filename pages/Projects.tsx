@@ -9,7 +9,6 @@ export default function Projects() {
       <div>
           <NavigationBar/>
       </div>
-
     </div>
     </>
   )

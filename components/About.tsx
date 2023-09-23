@@ -4,27 +4,37 @@ import React from 'react'
 
 export default function About() {
   return (
-    <Card
-        direction={{ base: 'column', sm: 'row' }}
-        overflow='hidden'
-        bg="#452c63"
-        boxShadow={{ base: 'lg', sm: 'xl' }}
-    >
+<Card
+  direction={{ base: 'column', sm: 'row' }}
+  overflow='hidden'
+  backgroundColor={'purple.80'}
+>
+  <Image
+    objectFit='cover'
+    maxW={{ base: '100%', sm: '200px' }}
+    src='../images/myshape.jpg'
+    alt='my'
+  />
 
-    <Stack>
-        <CardBody>
-        <Heading color={'white'} size='md'>Hello! I'm Nimsara Paramulla.</Heading>
-        <Text py='2' color={'white'}>
-        As a startup Embedded Systems and IOT based web designer, I offer professional and affordable products as an IOT solution to your problems. I have experience with ESP32, ESP8266, ARDUINO, Raspberrypi microcontrollers and many types of sensors, actuators such as TUYA smart devices, NODERED, MQTT brokers, Firebase. Also frontend and backend technologies such as JavaScript, Flask React, Angular.
-        </Text>
-        </CardBody>
+  <Stack alignItems={'center'}>
+    <CardBody>
+      <Heading size="lg" color={'white'}>About Me</Heading>
 
-        <CardFooter>
-        <Button variant='solid' colorScheme='purple'>
-            My CV
-        </Button>
-        </CardFooter>
-    </Stack>
-    </Card>
+      <Text py='2' color={'white'}>
+      I’m Nimsara Thisal. I'm currently an undergraduate student at the University of Moratuwa, department of Computer Science and Engineering. 
+      Also I'm specialized in Integrated Computer Engineering stream. 
+        So I'm deeply passionate about IoT-based web development, which essentially involves making things smart and connected through the internet. 
+        To gain practical experience and learn from real-world projects, I've taken up freelancing on Fiverr. Now I'm 5 star rated seller on Fiverr.
+        It's been an exciting journey, working on various tasks and expanding my skills with various types of clients.
+      </Text>
+    </CardBody>
+
+    <CardFooter>
+      <Button variant='solid' colorScheme='purple'>
+        My CV
+      </Button>
+    </CardFooter>
+  </Stack>
+</Card>
   )
 }

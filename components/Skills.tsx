@@ -14,11 +14,11 @@ import React from 'react'
 
 export default function Skills() {
   return (
-    <Tabs variant='soft-rounded' colorScheme='purple'>
-  <TabList>
-    <Tab color={'white'}>Programming languages</Tab>
-    <Tab color={'white'}>Full-Stack Development</Tab>
-    <Tab color={'white'}>Embedded System Developmet</Tab>
+    <Tabs variant='soft-rounded' colorScheme='purple' alignItems='center'>
+  <TabList gap={6}>
+    <Tab color={'white'}>Programming</Tab>
+    <Tab color={'white'}>Full-Stack</Tab>
+    <Tab color={'white'}>Embedded Systems</Tab>
   </TabList>
 
   <TabPanels>

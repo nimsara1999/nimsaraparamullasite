@@ -14,12 +14,6 @@ export const MenuData = [
         icon:"fa-solid fa-book"
     },
     {
-        title:"Services",
-        url:"#",
-        cName:"nav-links",
-        icon:"fa-solid fa-briefcase"
-    },
-    {
         title:"About",
         url:"#",
         cName:"nav-links",

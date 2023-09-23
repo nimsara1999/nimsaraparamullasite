@@ -17,7 +17,7 @@
   top: 20px;
   left: 50%;
   transform: translate(-50%);
-  opacity: 0.75;
+  opacity: 0.8;
 }
 .NavbarItems:hover {
   backdrop-filter: blur(4px);
