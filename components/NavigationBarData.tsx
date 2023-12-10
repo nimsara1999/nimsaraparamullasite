@@ -9,19 +9,19 @@ export const MenuData = [
     },
     {
         title:"Projects",
-        url:"/Projects",
+        url:"",
         cName:"nav-links",
         icon:"fa-solid fa-book"
     },
     {
         title:"About",
-        url:"#",
+        url:"",
         cName:"nav-links",
         icon:"fa-solid fa-circle-info"
     },
     {
         title:"Contact",
-        url:"#",
+        url:"",
         cName:"nav-links",
         icon:"fa-solid fa-address-book"
     }

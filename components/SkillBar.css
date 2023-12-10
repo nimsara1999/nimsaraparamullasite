@@ -8,6 +8,13 @@
   padding: 40px 40px 40px 40px;
   height: auto;
 }
+@media screen and (max-width: 500px) {
+  .skills-tabs{
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+  }
+  }
 
 .d-flex {
   list-style-type: none;
@@ -43,7 +50,7 @@
 }
 
 .togcontainer {
-  margin-top: 10px;
+  
   margin-left: 450px;
   margin-right: 450px;
   align-items: center;

@@ -1,19 +1,30 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import NavigationBar from '../components/NavigationBar'
 import './Home.css'
 import Avatar from '../components/Avatar'
-import { Button, ButtonGroup, Img, Stack } from '@chakra-ui/react'
+import { Button, ButtonGroup, Center, Img, Stack } from '@chakra-ui/react'
 import { MdEmail, MdArrowForward } from "react-icons/md"
 import Contact from '../components/Contact'
 import Skills from '../components/Skills'
 import About from '../components/About'
+import Project1 from '../components/Project1'
 
 export default function Home() {
-  return (
+  const aboutRef = useRef<HTMLDivElement | null>(null); 
+  const contactRef = useRef<HTMLDivElement | null>(null); 
+  const projectsRef = useRef<HTMLDivElement | null>(null); 
+
+  const childProps = {
+    aboutRef,
+    contactRef,
+    projectsRef
+  };
+
+   return (
     <>
     <div className='home-full'>
       <div className='home-nav'>
-        <NavigationBar></NavigationBar>
+        <NavigationBar {...childProps}></NavigationBar>
       </div>
 
       <div className="avatar">
@@ -21,10 +32,10 @@ export default function Home() {
         <div>
           <h1 className='heading'>I'm Nimsara Paramulla</h1>
         </div>
-        <div>
+        <div className="avatarDescription">
         <h2 className='intro'>Welcome to my digital hub! I'm all about IoT and embedded systems with software engineering expertise. Let's embark on this innovation journey together, fueled by curiosity.</h2>
         </div>
-        <Stack direction='row' spacing={4} paddingTop={10}>
+        <Stack direction='row' flexWrap={'wrap'} spacing={4} paddingTop={10} >
           <Button leftIcon={<MdEmail />} colorScheme='purple' variant='solid'>
             Email
           </Button>
@@ -47,11 +58,13 @@ export default function Home() {
       <Skills/>
       </div>
 
-      <div className='about-me'>
-      <About></About>
+      <div className='about-me' ref={aboutRef}>
+       <About></About>
       </div>
 
-      <div>
+      <div  ref={projectsRef}>
+      <Project1></Project1>      </div>
+      <div ref={contactRef}>
         <Contact></Contact>
     </div>
     </div>

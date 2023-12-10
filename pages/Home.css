@@ -4,6 +4,7 @@
 
 .home-full {
   background-color: #000000d9;
+  overflow: hidden;
 }
 .avatar {
   display: flex;
@@ -12,6 +13,11 @@
   background: radial-gradient(circle at center, #452c63, black 100%);
   height: 100vh;
   width: 100%;
+  padding-bottom: 10px;
+}
+.avatarDescription {
+  width: 80%;
+  margin-bottom: 50px;
 }
 
 .heading {
@@ -22,8 +28,8 @@
 }
 
 .intro {
-  padding-left: 300px;
-  padding-right: 300px;
+  padding-left: 150px;
+  padding-right: 150px;
   color: white;
   font-size: 1.2rem;
   text-align: center;
@@ -32,8 +38,8 @@
 .about-me {
   padding-top: 50px;
   padding-bottom: 50px;
-  padding-left: 300px;
-  padding-right: 300px;
+  padding-left: 150px;
+  padding-right: 150px;
   color: white;
   font-size: 1.2rem;
   text-align: center;
@@ -42,10 +48,12 @@
 .skills {
   padding-top: 50px;
   padding-bottom: 50px;
-  padding-left: 300px;
   color: white;
   font-size: 1.2rem;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .core-heading {
@@ -55,4 +63,15 @@
   text-shadow: 2px 2px black;
   text-align: center;
   text-decoration: bold;
+}
+
+@media (max-width: 768px) {
+  .intro {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+  .about-me {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
 }

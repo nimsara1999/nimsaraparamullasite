@@ -1,5 +1,4 @@
-'use client'
-
+import React from 'react'; // Import React if not already imported
 import {
   Box,
   chakra,
@@ -14,174 +13,125 @@ import {
   SimpleGrid,
   StackDivider,
   useColorModeValue,
-  VisuallyHidden,
   List,
   ListItem,
-  Center,
-} from '@chakra-ui/react'
-import { MdLocalShipping } from 'react-icons/md'
+} from '@chakra-ui/react';
+import { MdLocalShipping } from 'react-icons/md';
 
-export default function Simple() {
+const products = [
+  {
+    name: 'Intellimate Robot',
+    description: 'Intelligent pet robot',
+    image:
+      'https://images.unsplash.com/photo-1596516109370-29001ec8ec36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyODE1MDl8MHwxfGFsbHx8fHx8fHx8fDE2Mzg5MzY2MzE&ixlib=rb-1.2.1&q=80&w=1080',
+    features: ['React', 'Javascript',"Nodejs", 'MySql'],
+    details: [
+      'Redux Implemented',
+      'Mobile Responsivness',
+      'Optimized'
+       ],
+  },
+  {
+    name: 'Intellimate Robot',
+    description: 'Intelligent pet robot',
+    image:
+      'https://images.unsplash.com/photo-1596516109370-29001ec8ec36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyODE1MDl8MHwxfGFsbHx8fHx8fHx8fDE2Mzg5MzY2MzE&ixlib=rb-1.2.1&q=80&w=1080',
+      features: ['React', 'Javascript', 'Redux'],
+      details: [
+        'Redux Implemented',
+        'Mobile Responsivness',
+        'Optimized'
+         ],
+  },
+  {
+    name: 'Intellimate Robot',
+    description: 'Intelligent pet robot',
+    image:
+      'https://images.unsplash.com/photo-1596516109370-29001ec8ec36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyODE1MDl8MHwxfGFsbHx8fHx8fHx8fDE2Mzg5MzY2MzE&ixlib=rb-1.2.1&q=80&w=1080',
+      features: ['React', 'Javascript', 'Redux'],
+      details: [
+   'Redux Implemented',
+   'Mobile Responsivness',
+   'Optimized'
+    ],
+  },
+  // Add another product object here
+];
+
+export default function Project1() {
   return (
-    <Container maxW={'5xl'}>
-      <SimpleGrid
-        columns={{ base: 1, lg: 2 }}
-        spacing={{ base: 8, md: 10 }}
-        py={{ base: 18, md: 24 }}>
-        <Flex>
-          <Image
-            rounded={'md'}
-            alt={'product image'}
-            src={
-              'https://images.unsplash.com/photo-1596516109370-29001ec8ec36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyODE1MDl8MHwxfGFsbHx8fHx8fHx8fDE2Mzg5MzY2MzE&ixlib=rb-1.2.1&q=80&w=1080'
-            }
-            fit={'cover'}
-            align={'center'}
-            w={'100%'}
-            h={{ base: '50%', sm: '200px', lg: '300px' }}
-          />
-        </Flex>
-        <Stack spacing={{ base: 6, md: 10 }}>
-          <Box as={'header'}>
-            <Heading
-              lineHeight={1.1}
-              fontWeight={600}
-              fontSize={{ base: 'xl', sm: '2xl', lg: '3xl' }}
-              color={'white'}>
-              Intellimate Robot
-            </Heading>
-            <Text
-              color={useColorModeValue('gray.900', 'gray.400')}
-              fontWeight={300}
-              fontSize={'xl'}
-              textColor={'white'}>
-              Intelligent pet robot
-            </Text>
-          </Box>
+    <Container maxW={'5xl'} >
+      <SimpleGrid columns={{ base: 1, lg: 3 }}  py={{ base: 18, md: 24 }}>
+        {products.map((product, index) => (
+          <Flex margin={'10px'} background={'#696969'} borderRadius={'10px'} padding={'25px'} border={'1px solid grey'} key={index} flexDirection={'column'}>
+            <Image
+              alt={'product image'}
+              src={product.image}
+              fit={'cover'}
+              align={'center'}
+              w={'100%'}
+              marginBottom={'25px'}
+              h={{ base: '50%', sm: '200px', lg: '300px' }}
+            />
+            <Stack spacing={{ base: 6, md: 10 }}>
+              <Box as={'header'}>
+                <Heading
+                  lineHeight={1.1}
+                  fontWeight={600}
+                  fontSize={{ base: 'xl', sm: '2xl', lg: '3xl' }}
+                  color={'white'} // Change text color to black for better visibility
+                >
+                  {product.name}
+                </Heading>
+              </Box>
 
-          <Stack
-            spacing={{ base: 4, sm: 6 }}
-            direction={'column'}
-            divider={
-              <StackDivider borderColor={useColorModeValue('gray.200', 'gray.600')} />
-            }>
-            <VStack spacing={{ base: 4, sm: 6 }}>
-              <Text
-                color={useColorModeValue('gray.500', 'gray.400')}
-                fontSize={'xl'}
-                fontWeight={'300'}>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                eirmod tempor invidunt ut labore
-              </Text>
-              <Text fontSize={'lg'}>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid amet
-                at delectus doloribus dolorum expedita hic, ipsum maxime modi nam officiis
-                porro, quae, quisquam quos reprehenderit velit? Natus, totam.
-              </Text>
-            </VStack>
-            <Box>
-              <Text
-                fontSize={{ base: '16px', lg: '18px' }}
-                color={useColorModeValue('yellow.500', 'yellow.300')}
-                fontWeight={'500'}
+              <Stack
+                spacing={{ base: 4, sm: 6 }}
+                direction={'column'}
+                divider={<StackDivider borderColor={useColorModeValue('gray.200', 'gray.600')} />}
+              >
+                <Box>
+                  <List spacing={2} display={'flex'}  justifyContent={'space-between'} alignItems={'center'} flexWrap={'wrap'}>
+                    {product.features.map((feature, index) => (
+                      <ListItem fontSize={15} borderRadius={'10px'} marginTop={'0px'} background={'#6b46c1'} width={'fit-content'} padding={'10px'} key={index} color={'white'}>{feature}</ListItem>
+                    ))}
+                  </List>
+                </Box>
+                <Box>
+                  <List spacing={2}>
+                    {product.details.map((detail, index) => (
+                      <ListItem key={index}>
+                        <Text as={'span'} fontWeight={'bold'} color={'white'}>
+                          {detail}
+                        </Text>
+                      </ListItem>
+                    ))}
+                  </List>
+                </Box>
+              </Stack>
+
+              <Button
+              alignItems={'center'}
+                rounded={'md'}
+                w={'50%'}
+                mt={8}
+                size={'lg'}
+                py={'7'}
+                bg={'#6b46c1'}
+                color={useColorModeValue('white', 'gray.900')}
                 textTransform={'uppercase'}
-                mb={'4'}>
-                Features
-              </Text>
+                _hover={{
+                  transform: 'translateY(2px)',
+                  boxShadow: 'lg',
+                }}
+              >
+                Details
+              </Button>
 
-              <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-                <List spacing={2}>
-                  <ListItem>Chronograph</ListItem>
-                  <ListItem>Master Chronometer Certified</ListItem>{' '}
-                  <ListItem>Tachymeter</ListItem>
-                </List>
-                <List spacing={2}>
-                  <ListItem>Anti‑magnetic</ListItem>
-                  <ListItem>Chronometer</ListItem>
-                  <ListItem>Small seconds</ListItem>
-                </List>
-              </SimpleGrid>
-            </Box>
-            <Box>
-              <Text
-                fontSize={{ base: '16px', lg: '18px' }}
-                color={useColorModeValue('yellow.500', 'yellow.300')}
-                fontWeight={'500'}
-                textTransform={'uppercase'}
-                mb={'4'}>
-                Product Details
-              </Text>
-
-              <List spacing={2}>
-                <ListItem>
-                  <Text as={'span'} fontWeight={'bold'}>
-                    Between lugs:
-                  </Text>{' '}
-                  20 mm
-                </ListItem>
-                <ListItem>
-                  <Text as={'span'} fontWeight={'bold'}>
-                    Bracelet:
-                  </Text>{' '}
-                  leather strap
-                </ListItem>
-                <ListItem>
-                  <Text as={'span'} fontWeight={'bold'}>
-                    Case:
-                  </Text>{' '}
-                  Steel
-                </ListItem>
-                <ListItem>
-                  <Text as={'span'} fontWeight={'bold'}>
-                    Case diameter:
-                  </Text>{' '}
-                  42 mm
-                </ListItem>
-                <ListItem>
-                  <Text as={'span'} fontWeight={'bold'}>
-                    Dial color:
-                  </Text>{' '}
-                  Black
-                </ListItem>
-                <ListItem>
-                  <Text as={'span'} fontWeight={'bold'}>
-                    Crystal:
-                  </Text>{' '}
-                  Domed, scratch‑resistant sapphire crystal with anti‑reflective treatment
-                  inside
-                </ListItem>
-                <ListItem>
-                  <Text as={'span'} fontWeight={'bold'}>
-                    Water resistance:
-                  </Text>{' '}
-                  5 bar (50 metres / 167 feet){' '}
-                </ListItem>
-              </List>
-            </Box>
-          </Stack>
-
-          <Button
-            rounded={'none'}
-            w={'full'}
-            mt={8}
-            size={'lg'}
-            py={'7'}
-            bg={useColorModeValue('gray.900', 'gray.50')}
-            color={useColorModeValue('white', 'gray.900')}
-            textTransform={'uppercase'}
-            _hover={{
-              transform: 'translateY(2px)',
-              boxShadow: 'lg',
-            }}>
-            Add to cart
-          </Button>
-
-          <Stack direction="row" alignItems="center" justifyContent={'center'}>
-            <MdLocalShipping />
-            <Text>2-3 business days delivery</Text>
-          </Stack>
-        </Stack>
+            </Stack>
+          </Flex>
+        ))}
       </SimpleGrid>
     </Container>
-  )
+  );
 }
